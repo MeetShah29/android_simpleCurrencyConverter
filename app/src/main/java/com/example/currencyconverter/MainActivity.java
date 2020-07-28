@@ -13,7 +13,8 @@ public class MainActivity extends AppCompatActivity {
         EditText editText = findViewById(R.id.currency);
         Double dollars = Double.parseDouble(editText.getText().toString());
         Double pound = dollars * 0.75;
-        Toast.makeText(this,"Pound: "+pound, Toast.LENGTH_SHORT).show();
+        // Using String.format("%.2f", pound) to get the value with two decimals for eg:- 10.23
+        Toast.makeText(this, "Pound: " + String.format("%.2f", pound), Toast.LENGTH_SHORT).show();
     }
 
     @Override
